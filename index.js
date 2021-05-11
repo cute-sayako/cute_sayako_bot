@@ -33,7 +33,11 @@ console.log(generatePoem(100))
 
 const bot = new Composer
 
-bot.command('poem', Telegraf.reply(generatePoem(1)))
+bot.command('poem', (ctx) => {
+    let poem = generatePoem(1)[0]
+    console.log(poem)
+    ctx.reply(poem)
+})
 
 module.exports = bot
 
