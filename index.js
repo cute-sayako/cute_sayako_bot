@@ -34,7 +34,7 @@ console.log(generatePoem(100))
 const bot = new Composer
 
 bot.command('poem', (ctx) => {
-    let poem = generatePoem(1)[0]
+    let poem = generatePoem(1)
     console.log(poem)
     ctx.reply(poem)
 })
